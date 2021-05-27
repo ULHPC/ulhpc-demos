@@ -7,6 +7,7 @@ nav:
   - Demonstrators:
       - BioMass: 'biomass/index.md'
       - Co-located Partitioning for Multi-Physics Coupled Simulations: 'ColocatedMultiPhysics/index.md'
+      - Hybrid MPI+OpenMP Parallelization for Discrete Element Method: 'HybridMPI/index.md'
   - Contributing:
     - Overview: 'contributing/index.md'
     - Semantic Versioning: 'contributing/versioning.md'
