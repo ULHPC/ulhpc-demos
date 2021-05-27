@@ -1,0 +1,14 @@
+# -*- mode: makefile; -*-
+# Time-stamp: <Thu 2021-05-27 16:22 svarrette>
+################################################################################
+# .Makefile.local - Local custom directives for the root Makefile
+#
+# Copyright (c) 2021 UL HPC Team <hpc-team@uni.lu>
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+################################################################################
+
+SETUP_TARGETS += setup-direnv setup-pyenv
+build:
+	@if [ -n "`which mkdocs`" ]; then \
+		mkdocs build; \
+	fi
