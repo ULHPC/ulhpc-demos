@@ -4,6 +4,8 @@ nav:
 #  - General:
   - Home: 'index.md'
   - Pre-Requisites and Repository Setup: 'setup.md'
+  - Demonstrators:
+      - BioMass: 'biomass/index.md'
   - Contributing:
     - Overview: 'contributing/index.md'
     - Semantic Versioning: 'contributing/versioning.md'
