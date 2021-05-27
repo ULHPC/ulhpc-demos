@@ -6,6 +6,7 @@ nav:
   - Pre-Requisites and Repository Setup: 'setup.md'
   - Demonstrators:
       - BioMass: 'biomass/index.md'
+      - Co-located Partitioning for Multi-Physics Coupled Simulations: 'ColocatedMultiPhysics/index.md'
   - Contributing:
     - Overview: 'contributing/index.md'
     - Semantic Versioning: 'contributing/versioning.md'
