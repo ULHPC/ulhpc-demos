@@ -4,7 +4,7 @@ nav:
 #  - General:
   - Home: 'index.md'
   - Demonstrators:
-      - BioMass: 'biomass/index.md'
+      - Digital Twin of a Biomass Furnace: 'biomass/index.md'
       - Co-located Partitioning for Multi-Physics Coupled Simulations: 'ColocatedMultiPhysics/index.md'
       - Hybrid MPI+OpenMP Parallelization for DEM: 'hydridDEM/index.md'
    ##############
@@ -17,13 +17,14 @@ nav:
     - National Competence Centre (NCC) in HPC: https://www.luxinnovation.lu/national-competence-centre-in-hpc
   - Contributing:
     - Overview: 'contributing/index.md'
+    - Repository Layout: 'layout.md'
     - Pre-Requisites and Repository Setup: 'setup.md'
     - Semantic Versioning: 'contributing/versioning.md'
 
 # Project Information
 site_name: ULHPC Demonstrators
 site_description: ULHPC Demonstrators
-site_author: L. Koutsantonis, S. Varrette, F. Pinel and Uni.lu HPC (ULHPC) Team
+site_author: L. Koutsantonis, S. Varrette, and Uni.lu HPC (ULHPC) Team
 site_dir: public
 site_url: "https://hpc-demos.uni.lu/"
 
@@ -33,7 +34,7 @@ repo_url: https://gitlab.uni.lu/www/ulhpc-demos
 #edit_uri: blob/master/docs/
 
 # Copyright
-copyright: Copyright &copy; 2020-2021 L. Koutsantonis and Uni.lu HPC (ULHPC) Team
+copyright: Copyright &copy; 2020-2021 L. Koutsantonis, F. Pinel, S. Varrette and Uni.lu HPC (ULHPC) Team
 
 # Configuration
 # strict: true
@@ -46,8 +47,8 @@ theme:
     primary: blue
     accent:  light blue
   features:
-    - navigation.instant
-  # #   - tabs
+    - navigation.expand
+    - navigation.top
 
 plugins:
   - search # necessary for search to work
