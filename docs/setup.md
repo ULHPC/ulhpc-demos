@@ -144,35 +144,48 @@ Based on the guidelines of [this blog post](https://varrette.gforge.uni.lu/tutor
 Installation  instructions -- see also [this blog post](https://varrette.gforge.uni.lu/tutorials/pyenv.html)
 
 ```bash
-### Mac OS
-$> brew install pyenv pyenv-virtualenv direnv
-### Linux
+### TL;DR; installation
+# Mac OS
+brew install direnv pyenv pyenv-virtualenv
+# Linux/WSL
+sudo { apt-get | yum | ... } install direnv
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
-$> git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
-$> { apt-get | yum } install direnv    # direnv install
+export PATH="$HOME/.pyenv/bin:$PATH"
+pyenv root     # Should return $HOME/.pyenv
 ```
 
-You then need adapt your environment _i.e._ `~/.{profile | bash* | zsh* etc.}` to support [pyenv shims](https://github.com/yyuu/pyenv#understanding-shims), [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenv
-s/) and [direnv](https://direnv.net/). Ex:
+**Assuming** you have configured the [XDG Base Directories](https://specifications.freedesktop.org/basedir-spec/latest/) in your favorite shell configuration (`~/.bashrc`, `~/.zshrc` or `~/.profile`), you can enable direnv and pyenv as follows
 
 ```bash
-# To add in your favorite shell configuration (.bashrc, .zshrc etc.)
-#
+# XDG  Base Directory Specification
+# See https://specifications.freedesktop.org/basedir-spec/latest/
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+# [...]
+# Direnv - see https://direnv.net/
+if [ -f "$HOME/.config/direnv/init.sh" ]; then
+	. $HOME/.config/direnv/init.sh
+fi
 # - pyenv: https://github.com/pyenv/pyenv
 # - pyenv-virtualenv: https://github.com/pyenv/pyenv-virtualenv
+export PYENV_ROOT=$HOME/.pyenv
+export PATH="${PYENV_ROOT}/bin:${PYENV_ROOT}/plugins/pyenv-virtualenv/bin:$PATH"
 if [ -n "$(which pyenv)" ]; then
-  eval "$(pyenv init --path)"
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-  export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-fi
-#
-# - direnv: https://direnv.net/
-if [ -n "$(which direnv)" ]; then
-  eval "$(direnv hook $(basename $SHELL))"
-  # export DIRENV_WARN_TIMEOUT=100s
+   eval "$(pyenv init --path)"
+   eval "$(pyenv init -)"
+   eval "$(pyenv virtualenv-init -)"
+   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 fi
 ```
+
+This is required to support [pyenv shims](https://github.com/yyuu/pyenv#understanding-shims), [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenv
+s/) and [direnv](https://direnv.net/).
+You can also create the following files:
+
+* [`.config/pyenv/init.sh`](https://github.com/Falkor/dotfiles/blob/master/pyenv/init.sh)
+* [`.config/direnv/direnvrc`](https://github.com/Falkor/dotfiles/blob/master/direnv/direnvrc)
+
 
 If you're using [oh-my-zsh](http://ohmyz.sh/), you probably want to enable the [pyenv plugin](https://github.com/Falkor/dotfiles/blob/master/oh-my-zsh/.zshrc#L73)
 
