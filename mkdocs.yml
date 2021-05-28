@@ -3,26 +3,27 @@ nav:
   ##########
 #  - General:
   - Home: 'index.md'
-  - Pre-Requisites and Repository Setup: 'setup.md'
   - Demonstrators:
       - BioMass: 'biomass/index.md'
       - Co-located Partitioning for Multi-Physics Coupled Simulations: 'ColocatedMultiPhysics/index.md'
-      - Hybrid MPI+OpenMP Parallelization for Discrete Element Method: 'HybridMPI/index.md'
-  - Contributing:
-    - Overview: 'contributing/index.md'
-    - Semantic Versioning: 'contributing/versioning.md'
-  ##############
+      - Hybrid MPI+OpenMP Parallelization for DEM: 'hydridDEM/index.md'
+   ##############
   - Web Portals:
-    - ULHPC Website: https://hpc.uni.lu
+    - Uni.lu HPC (ULHPC): https://hpc.uni.lu
     - Technical Documentation: https://hpc-docs.uni.lu
     - Live Platform status: https://hpc.uni.lu/live-status/motd
     - ULHPC Tutorials: https://ulhpc-tutorials.readthedocs.io/
     - Helpdesk / Ticket Portal: https://hpc.uni.lu/support
+    - National Competence Centre (NCC) in HPC: https://www.luxinnovation.lu/national-competence-centre-in-hpc
+  - Contributing:
+    - Overview: 'contributing/index.md'
+    - Pre-Requisites and Repository Setup: 'setup.md'
+    - Semantic Versioning: 'contributing/versioning.md'
 
 # Project Information
 site_name: ULHPC Demonstrators
 site_description: ULHPC Demonstrators
-site_author: L. Koutsantonis and Uni.lu HPC (ULHPC) Team
+site_author: L. Koutsantonis, S. Varrette, F. Pinel and Uni.lu HPC (ULHPC) Team
 site_dir: public
 site_url: "https://hpc-demos.uni.lu/"
 
