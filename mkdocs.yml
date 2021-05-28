@@ -7,6 +7,7 @@ nav:
       - Digital Twin of a Biomass Furnace: 'biomass/index.md'
       - Co-located Partitioning for Multi-Physics Coupled Simulations: 'ColocatedMultiPhysics/index.md'
       - Hybrid MPI+OpenMP Parallelization for DEM: 'hydridDEM/index.md'
+      - Transition to Green Hydrogen in Steel Making: 'steelmaking/index.md'
    ##############
   - Web Portals:
     - Uni.lu HPC (ULHPC): https://hpc.uni.lu
