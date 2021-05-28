@@ -30,8 +30,8 @@ site_dir: public
 site_url: "https://hpc-demos.uni.lu/"
 
 # Repository
-repo_name: www/ulhpc-demos
-repo_url: https://gitlab.uni.lu/www/ulhpc-demos
+# repo_name: www/ulhpc-demos
+# repo_url: https://gitlab.uni.lu/www/ulhpc-demos
 #edit_uri: blob/master/docs/
 
 # Copyright
