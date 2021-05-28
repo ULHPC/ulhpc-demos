@@ -103,6 +103,7 @@ fi
 export PYENV_ROOT=$HOME/.pyenv
 export PATH="${PYENV_ROOT}/bin:${PYENV_ROOT}/plugins/pyenv-virtualenv/bin:$PATH"
 if [ -n "$(which pyenv)" ]; then
+   eval "$(pyenv init --path)"
    eval "$(pyenv init -)"
    eval "$(pyenv virtualenv-init -)"
    export PYENV_VIRTUALENV_DISABLE_PROMPT=1
@@ -117,7 +118,6 @@ You can now run the following command to setup your local machine in a compliant
 make setup-direnv
 make setup-pyenv
 ```
-
 
 Running `direnv allow` (this will have to be done only once), you should automatically enable the virtualenv `ulhpc-docs` based on the python version specified in [`.python-version`](.python-version). You'll eventually need to install the appropriate Python version with `pyenv`:
 
@@ -138,6 +138,17 @@ make setup-python
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
+
+**Alternatively** you may prefer to rely on native python 3 `venv` support you can create with
+
+```bash 
+# check the correct name of the virtualenv is grabbed
+$ echo python -m venv ~/venv/$(head .python-virtualenv)
+# real creation
+$ python -m venv ~/venv/$(head .python-virtualenv)
+```
+
+
 
 # Documentation
 
