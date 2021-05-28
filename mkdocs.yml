@@ -3,24 +3,28 @@ nav:
   ##########
 #  - General:
   - Home: 'index.md'
-  - Pre-Requisites and Repository Setup: 'setup.md'
   - Demonstrators:
-      - BioMass: 'biomass/index.md'
-  - Contributing:
-    - Overview: 'contributing/index.md'
-    - Semantic Versioning: 'contributing/versioning.md'
-  ##############
+      - Digital Twin of a Biomass Furnace: 'biomass/index.md'
+      - Co-located Partitioning for Multi-Physics Coupled Simulations: 'ColocatedMultiPhysics/index.md'
+      - Hybrid MPI+OpenMP Parallelization for DEM: 'hydridDEM/index.md'
+   ##############
   - Web Portals:
-    - ULHPC Website: https://hpc.uni.lu
+    - Uni.lu HPC (ULHPC): https://hpc.uni.lu
     - Technical Documentation: https://hpc-docs.uni.lu
     - Live Platform status: https://hpc.uni.lu/live-status/motd
     - ULHPC Tutorials: https://ulhpc-tutorials.readthedocs.io/
     - Helpdesk / Ticket Portal: https://hpc.uni.lu/support
+    - National Competence Centre (NCC) in HPC: https://www.luxinnovation.lu/national-competence-centre-in-hpc
+  - Contributing:
+    - Overview: 'contributing/index.md'
+    - Repository Layout: 'layout.md'
+    - Pre-Requisites and Repository Setup: 'setup.md'
+    - Semantic Versioning: 'contributing/versioning.md'
 
 # Project Information
 site_name: ULHPC Demonstrators
 site_description: ULHPC Demonstrators
-site_author: L. Koutsantonis and Uni.lu HPC (ULHPC) Team
+site_author: L. Koutsantonis, S. Varrette, and Uni.lu HPC (ULHPC) Team
 site_dir: public
 site_url: "https://hpc-demos.uni.lu/"
 
@@ -30,7 +34,7 @@ repo_url: https://gitlab.uni.lu/www/ulhpc-demos
 #edit_uri: blob/master/docs/
 
 # Copyright
-copyright: Copyright &copy; 2020-2021 L. Koutsantonis and Uni.lu HPC (ULHPC) Team
+copyright: Copyright &copy; 2020-2021 L. Koutsantonis, F. Pinel, S. Varrette and Uni.lu HPC (ULHPC) Team
 
 # Configuration
 # strict: true
@@ -43,8 +47,8 @@ theme:
     primary: blue
     accent:  light blue
   features:
-    - navigation.instant
-  # #   - tabs
+    - navigation.expand
+    - navigation.top
 
 plugins:
   - search # necessary for search to work
