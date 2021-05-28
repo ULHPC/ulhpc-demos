@@ -128,7 +128,6 @@ Please note that to clone a Git repository which contains symbolic links (symlin
 See also the instructions and screenshots provided on this [tutorial](http://rr-tutorials.readthedocs.io/en/latest/setup/#windows).
 
 
-
 ## Python Virtualenv / Pyenv and Direnv
 
 In order to have a consistent Python environment among the collaborators of this project, the use of [`virtualenv`](https://pypi.org/project/virtualenv/) (a tool to create isolated virtual Python environments) is strongly encouraged.
@@ -162,6 +161,7 @@ s/) and [direnv](https://direnv.net/). Ex:
 # - pyenv: https://github.com/pyenv/pyenv
 # - pyenv-virtualenv: https://github.com/pyenv/pyenv-virtualenv
 if [ -n "$(which pyenv)" ]; then
+  eval "$(pyenv init --path)"
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
