@@ -1,0 +1,107 @@
+# Co-located Partitioning for Multi-Physics Coupled Simulations
+
+<br/><font size="4">  **Prof. Bernhard Peters, Dr. Xavier Besseron, Dr. Alban Rousset, Dr. Abdoul Wahid Mainassara Chekaraou ** </font> 
+<br/>
+<br/><font size="4"><span style="color:gray">*LuXDEM Research Centre,
+<br/> Department of Engineering, 
+<br/> University of Luxembourg*
+
+   
+<br/><i class="fa fa-at"></i><bernhard.peters@uni.lu>, <xavier.besseron@uni.lu>
+<br/><i class="fab fa-internet-explorer"></i><a href="url">http://luxdem.uni.lu/ </a>
+<br/>
+<br/>
+
+## Summary
+
+Multi-physics problems containing discrete particles interacting with fluid phases have numerous applications in mechanical, chemical and environmental engineering. In particular, CFD-DEM couplings have been successfully applied to study several industrial processes, for example biomass combustion on a moving grate, particle sedimentation, iron production within a blast furnace, and selective laser melting for additive manufacturing.
+However, such simulations are normally very computationally intensive, and the execution time represents a major issue for the applicability of this numerical approach to complex scenarios. Furthermore, parallel coupling of independent software/libraries is inherently difficult. But in this case, DEM particles move within the CFD phases and hence a 3D volume coupling is necessary, which represents an important amount of data to be exchanged. This volume of communication can have a considerable impact on the performance of the parallel execution [^5] [^6]. The eXtended Discrete Element Method (XDEM) uses a coupled Eulerian-Lagrangian approach to simulate these complex phenomena and relies on the Discrete Element Method (DEM) to model the particle phase and Computational Fluid Dynamics (CFD) for the fluid phases, solved respectively with XDEM and OpenFOAM [^1]. 
+To address this issue, XDEM applies a coupling strategy relying on a co-located partitioning [^2] [^3][^4]. This approach coordinates the domain decomposition of the two independent solvers, XDEM and OpenFOAM, to impose some co-location constraints and reduce the overhead due to the coupling data exchange. This strategy for the parallel coupling of CFD-DEM has been evaluated to perform large scale simulations of debris within a dam break flow using more than 2000 cores [^4]. 
+
+<br/>
+<figure class="figure" style ="text-align: center">
+    <img  src="images/DamBreak_CFD-DEM_parallel_coupling_image01.png" width=700 alt="centered image"/>
+    <img  src="images/DamBreak_CFD-DEM_parallel_coupling_image02.png" width=700 alt="centered image"/>
+    <figcaption> <em>Figure 1. Coupled simulation XDEM+OpenFOAM of a dam break with particles: A column of water, carrying light particles (in yellow) and heavy particles (in red) is falling in a closed box. </em> </figcaption>
+</figure>     
+<br/>
+
+
+
+<div class="container">
+<div class="row mb-5">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<video width="640" height="480" class="embed-responsive embed-responsive-16by9" loop
+controls muted>
+<source src="videos/DamBreak_CFD-DEM_parallel_coupling.mp4"
+type='video/mp4' />
+
+</video>
+</div>
+<div class="col-lg-3"></div>
+</div>
+</div>
+
+
+
+## The Problem
+
+In CFD-DEM, the particles can move within the fluid phases. This means that the CFD and DEM domains overlap and it requires a 3D volume coupling. Therefore, the amount of data to be exchanged is important because it corresponds to a 3D volume and it can have a considerable impact on the performance of the parallel execution. Additionally, coupling independent software/libraries allows to use cutting-edge and dedicated modules but it is inherently difficult because each physics module is not aware of the other. This is the case when coupling OpenFOAM and XDEM. 
+We propose a novel approach, called co-located partitioning strategy, to address this issue and perform an efficient parallel coupling of CFD-DEM simulations. The co-located partitioning strategy imposes a constraint on the partitioning of the CFD and DEM domains: domain elements co-located in the simulation space are assigned to the same partition, and then attached to the same processor. This requires a meta-partitioner which is able to take into account the constraints of the both CFD and DEM problems. As a result, most of the coupling data exchange occurs within the same processor, or within the same process if the two CFD and DEM libraries are linked together into one executable, which considerably speeds-up the parallel execution. 
+<br/>
+<figure class="figure" style ="text-align: center">
+    <img  src="images/CFD-DEM_coupling_classic.png" width=550 alt="centered image"/>
+    <img  src="images/CFD-DEM_coupling_colocated.png" width=500 alt="centered image"/>
+    <figcaption> <em>Figure 2. In the classical approach, on the top, each simulation domain is partitioned independently and it usually leads to a complex communication pattern with an important communication overhead. Using the co-located approach, on the bottom, the partitions of the two domains are co-located on the same computing node (or even process) which considerably reduces the communication overhead.  </em> </figcaption>
+</figure>     
+<br/>
+ 
+
+
+
+
+
+## Results
+
+The co-located partitioning strategy reduces considerably the communication overhead due to the volume coupling. The weak scalability results show an overhead of 2.3% when quadrupling the number of processes from 280 to 1120.
+<br/>
+
+| #nodes     | #cores     | Total #particles | Total #CFD cells | Average Timestep |Overhead | Inter-Physics Exchange |
+|:----------:|:----------:|:----------:|:----------:|:---------:|:----------:|:--------------:|
+| 10         | 280        | 2.5M       | 2.5M       |1.612 s    |-           | 0.7 ms         |
+| 20         | 560        | 5M         | 5M         |1.618 s    |1%          | 0.6 ms         |
+| 40         | 1120       | 10M        | 10M        |1.650 s    |2.3%        | 0.6 ms         |
+
+
+Other CFD-DEM solutions from literature (on similar configurations) display a much higher overhead due to large increase of process-to-process communication: 
+ 
+* MFIX: +160% overhead from 64 to 256 processes [^5]
+* SediFoam: +50% overhead from 128 to 512 processes [^6]
+
+The co-located approach enables large scale volume-coupled simulations. In this example, we consider a  dam break with particles, i.e. a column of water carrying light particles (in yellow) and heavy particles (in red) falling in a closed box. To evaluate the performance, we use 2.35 million particles and 10 million CFD cells. Scalability tests have been run from 4 nodes (112 cores) to 78 nodes (2184 cores) and showed an efficiency of 73% compared to the single node execution.
+
+<br/>
+<figure class="figure" style ="text-align: center">
+    <img  src="images/DamBreak_setup.png" width=700 alt="centered image"/>
+    <img  src="images/DamDreak_scalability.png" width=700 alt="centered image"/>
+    <figcaption> <em>Figure 3. Initial setup of the dam break with particles case which is used for the scalability test (top). It contains 2.35 millions of DEM particles and 10 millions of CFD cells. Scalability results from 4 nodes to 78 nodes (i.e. 112 cores to 2184 cores) using one MPI process per core (bottom). Execution with 2184 processes shows an efficient of 73% compared to the single node execution.</em> </figcaption>
+</figure>     
+<br/>
+
+
+
+
+## References
+
+[^1]: Peters, B., Baniasadi, M., Baniasadi, M., Besseron, X., Estupinan Donoso, A. A., Mohseni, S., & Pozzetti, G. (2019). The XDEM Multi-physics and Multi-scale Simulation Technology: Review on DEM-CFD Coupling, Methodology and Engineering Applications. Particuology, 44, 176 - 193. http://hdl.handle.net/10993/36884
+
+[^2]: Pozzetti, G., Jasak, H., Besseron, X., Rousset, A., & Peters, B. (2019). A parallel dual-grid multiscale approach to CFD-DEM couplings. Journal of Computational Physics, 378, 708-722. http://hdl.handle.net/10993/36347
+
+[^3]: Pozzetti, G., Besseron, X., Rousset, A., & Peters, B. (2018, September 14). A co-located partitions strategy for parallel CFD-DEM couplings. Advanced Powder Technology. http://hdl.handle.net/10993/36133
+
+[^4]:Besseron, X., Pozzetti, G., Rousset, A., Mainassara Chekaraou, A. W., & Peters, B. (2019, June 05). Co-located Partitioning Strategy and Dual-grid Multiscale Approach for Parallel Coupling of CFD-DEM Simulations. Paper presented at 8th edition of the International Conference on Computational Methods for Coupled Problems in Science and Engineering (COUPLED PROBLEMS 2019), Sitges, Spain. http://hdl.handle.net/10993/40156
+
+[^5]:P. Gopalakrishnan, P., & Tafti, D. (2013). Development of parallel DEM for the open source code MFIX. Powder Technology, 235:33 – 41. https://doi.org/10.1016/j.powtec.2012.09.006
+
+[^6]:Sun, R., & Xiao, H. (2016). SediFoam: A general-purpose, open-source CFD-DEM solver for particle-laden flow with emphasis on sediment transport. Computers & Geosciences, 89:207 – 219. https://doi.org/10.1016/j.cageo.2016.01.011
