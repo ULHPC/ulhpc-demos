@@ -18,11 +18,11 @@ nav:
     - ULHPC Tutorials: https://ulhpc-tutorials.readthedocs.io/
     - Helpdesk / Ticket Portal: https://hpc.uni.lu/support
     - National Competence Centre (NCC) in HPC: https://www.luxinnovation.lu/national-competence-centre-in-hpc
-  - Contributing:
-    - Overview: 'contributing/index.md'
-    - Repository Layout: 'layout.md'
-    - Pre-Requisites and Repository Setup: 'setup.md'
-    - Semantic Versioning: 'contributing/versioning.md'
+  # - Contributing:
+  #   - Overview: 'contributing/index.md'
+  #   - Repository Layout: 'layout.md'
+  #   - Pre-Requisites and Repository Setup: 'setup.md'
+  #   - Semantic Versioning: 'contributing/versioning.md'
 
 # Project Information
 site_name: ULHPC Demonstrators
