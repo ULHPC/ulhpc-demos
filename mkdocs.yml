@@ -6,7 +6,7 @@ nav:
   - Demonstrators:
       - Digital Twin of a Biomass Furnace: 'biomass/index.md'
       - Co-located Partitioning for Multi-Physics Coupled Simulations: 'ColocatedMultiPhysics/index.md'
-      - Hybrid MPI+OpenMP Parallelization for DEM: 'hydridDEM/index.md'
+      - Hybrid MPI+OpenMP Parallelization for DEM: 'hybridDEM/index.md'
       - Transition to Green Hydrogen in Steel Making: 'steelmaking/index.md'
       - Parameter Calibration for Multi-Physics Simulations: 'parametercalib/index.md'
       - Toward exact interaction energies in large molecules with Quantum Monte Carlo: 'quantumMC/index.md'
