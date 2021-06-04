@@ -2,9 +2,9 @@
 
 <br/><font size="4">  **Prof. Bernhard Peters, Dr. Xavier Besseron ** </font> 
 <br/>
-<br/><font size="4"><span style="color:gray">*XDEM Research Centre,
+<br/><font size="4"><span style="color:gray">*LuXDEM Research Centre,
+<br/> Department of Engineering, 
 <br/> University of Luxembourg*
-
    
 <br/><i class="fa fa-at"></i><bernhard.peters@uni.lu>, <xavier.besseron@uni.lu>
 <br/><i class="fab fa-internet-explorer"></i><a href="url"> www.xdem.de </a>
