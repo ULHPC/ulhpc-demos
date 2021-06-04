@@ -20,10 +20,12 @@ Consider our latest **[ULHPC User Guide (PDF)](https://hpc.uni.lu/download/slide
 
 ## List of Demonstrators
 
-| Title                                                                                                   | Uni.lu Research Group            |
-|---------------------------------------------------------------------------------------------------------|----------------------------------|
-| __[Digital Twin of a Biomass Furnace](biomass/index.md)__                                               | [LuxDEM](https://luxdem.uni.lu/) |
-| __[Co-located Partitioning for Multi-Physics Coupled Simulations](ColocatedMultiPhysics/index.md)__     | [LuxDEM](https://luxdem.uni.lu/) |
-| __[Hybrid MPI+OpenMP Parallelization for Discrete Element Method](hybridDEM/index.md)__                 | [LuxDEM](https://luxdem.uni.lu/) |
-| __[Transition to Green Hydrogen in Steel Making](steelmaking/index.md)__                                | [LuxDEM](https://luxdem.uni.lu/) |
+| Title                                                                                                   | Uni.lu Research Group                   |
+|---------------------------------------------------------------------------------------------------------|-----------------------------------------|
+| __[Digital Twin of a Biomass Furnace](biomass/index.md)__                                               | [LuxDEM](https://luxdem.uni.lu/)        |
+| __[Co-located Partitioning for Multi-Physics Coupled Simulations](ColocatedMultiPhysics/index.md)__     | [LuxDEM](https://luxdem.uni.lu/)        |
+| __[Hybrid MPI+OpenMP Parallelization for Discrete Element Method](hydridDEM/index.md)__                 | [LuxDEM](https://luxdem.uni.lu/)        |
+| __[Transition to Green Hydrogen in Steel Making](steelmaking/index.md)__                                | [LuxDEM](https://luxdem.uni.lu/)        |
 | __[Toward exact interaction energies in large molecules with Quantum Monte Carlo](quantumMC/index.md)__ | [TCP Uni.lu](https://www.tcpunilu.com/) |
+| __[Parameter Calibration for Multi-Physics Simulations](parametercalib/index.md)__                      | [LuxDEM](https://luxdem.uni.lu/)        |
+|                                                                                                         |                                         |

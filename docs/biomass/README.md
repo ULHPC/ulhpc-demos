@@ -2,7 +2,8 @@
 
 <br/><font size="4"> <strong>Prof. Bernhard Peters, Dr. Xavier Besseron</strong> </font>
 <br/>
-<br/><font size="4"><span style="color:gray">*XDEM Research Centre
+<br/><font size="4"><span style="color:gray">*LuXDEM Research Centre,
+<br/> Department of Engineering, 
 <br/> University of Luxembourg*
 
 
@@ -15,7 +16,7 @@
 ## Summary
 
 Biomass as a renewable energy source continues to grow in popularity to reduce fossil fuel consumption for environmental and economic benefits. Biomass as a solid fuel with considerable amount of moisture and non-homogeneous properties, is difficult to be used in many applications. Combustion and gasification of biomass is the most promising road to follow, however, the processes are complex because of the involved physical and chemical processes on various time and length scales including heating up, drying, pyrolysis, oxidation of gaseous pyrolysis products, char formation and gasification. Therefore, a Digital Twin allows a shift from current empirical-based practice to an advanced multi-physics simulation technology including multi-physical models on different length-scales to mirror accurately the state of furnace which is not feasible through experimental measurements due to the inaccessibility of the packed bed of biomass and the hostile environment. Thus, this process is regarded to be the first step in a chain for innovative and functional design and determines significantly the quality of the furnace and its behaviour.
-The Extended Discrete Element Method (XDEM) developed at the University of Luxembourg by Peters et al. [1][2] is an advanced numerical simulation technology for generating a digital twin with desired up-scaling capabilities. For this purpose, XDEM considers the solid material in the above-mentioned applications as a particulate phase i.e. consisting of individual particles. Each particle is a distinctive entity for which both dynamic (position and orientation in space) and thermodynamic (temperature and reaction progress) state is predicted as depicted in fig. 1. Thus, resolving the state of individual biomass particles e.g. wood pellets allows an unprecedented insight into the underlying physics and improves the solution accuracy significantly. Obviously, this approach including millions of particles for industry sized dimensions require large scale simulations on a HPC platform and handling efficiently a large data volume both for analysis and parallel performance.
+The Extended Discrete Element Method (XDEM) developed at the University of Luxembourg by Peters et al. [^1] [^2] is an advanced numerical simulation technology for generating a digital twin with desired up-scaling capabilities. For this purpose, XDEM considers the solid material in the above-mentioned applications as a particulate phase i.e. consisting of individual particles. Each particle is a distinctive entity for which both dynamic (position and orientation in space) and thermodynamic (temperature and reaction progress) state is predicted as depicted in fig. 1. Thus, resolving the state of individual biomass particles e.g. wood pellets allows an unprecedented insight into the underlying physics and improves the solution accuracy significantly. Obviously, this approach including millions of particles for industry sized dimensions require large scale simulations on a HPC platform and handling efficiently a large data volume both for analysis and parallel performance.
 
 
 <br/>
