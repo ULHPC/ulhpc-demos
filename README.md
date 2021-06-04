@@ -12,7 +12,7 @@
 
 HPC demonstrators established using [ULHPC](https://hpc.uni.lu) resources.
 Website based on the [mkdocs-material](https://squidfunk.github.io/mkdocs-material/getting-started/) theme and the [PyMdown Extensions](https://facelessuser.github.io/pymdown-extensions/).
-Either standalone, or integrated as part of main <hpc.uni.lu> website.
+Either standalone, or integrated as part of main <https://hpc.uni.lu> website.
 
 ## TL;DR;
 
@@ -37,6 +37,12 @@ Once clone and assuming you followed the [setup instructions `docs/setup.md`](do
    └── setup.md
    ```
 3. modify `mkdocs.yml` accordingly
+
+To add a new demo: 
+
+* create a new feature branch: `git-flow feature start <name>`
+* update `docs/<name>`, `mkdocs.yml`, `docs/index.md` etc. until you are satisfied from the live view  (`make doc`)
+* create a merge-request, assign it  
 
 
 ## Installation / Repository Setup
