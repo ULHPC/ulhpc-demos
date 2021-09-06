@@ -9,15 +9,15 @@ Selected applications and demonstrators established using the [High Performance 
 
 ## List of Demonstrators
 
-| Title                                                                                                                |
-|----------------------------------------------------------------------------------------------------------------------|
-| __[Digital Twin of a Biomass Furnace](biomass/index.md)__                                                            |
-| __[Co-located Partitioning for Multi-Physics Coupled Simulations](ColocatedMultiPhysics/index.md)__                  |
-| __[Hybrid MPI+OpenMP Parallelization for Discrete Element Method](hybridDEM/index.md)__                              |
-| __[Transition to Green Hydrogen in Steel Making](steelmaking/index.md)__                                             |
-| __[Toward exact interaction energies in large molecules with Quantum Monte Carlo](quantumMC/index.md)__              |
-| __[Parameter Calibration for Multi-Physics Simulations](parametercalib/index.md)__                                   |
-| __[GPU-accelerated Monte Carlo Simulations of of Photon Propagation in Voxelized  Structures](spectsim/index.md)__   |
+| Title                                                                                                                          |
+|--------------------------------------------------------------------------------------------------------------------------------|
+| __[Digital Twin of a Biomass Furnace](biomass/index.md)__                                                                      |
+| __[Co-located Partitioning for Multi-Physics Coupled Simulations](ColocatedMultiPhysics/index.md)__                            |
+| __[Hybrid MPI+OpenMP Parallelization for Discrete Element Method](hybridDEM/index.md)__                                        |
+| __[Transition to Green Hydrogen in Steel Making](steelmaking/index.md)__                                                       |
+| __[Toward exact interaction energies in large molecules with Quantum Monte Carlo](quantumMC/index.md)__                        |
+| __[Parameter Calibration for Multi-Physics Simulations](parametercalib/index.md)__                                             |
+| __[3D Multi-phase Lattice Boltzmann Simulations in Hydrophobic Membranes for Membrane Distillation](BoltzmannSim/index.md)__   |
 
 
 
