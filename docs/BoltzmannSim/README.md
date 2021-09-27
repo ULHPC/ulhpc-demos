@@ -1,8 +1,8 @@
 # 3D Multi-phase Lattice Boltzmann Simulations in Hydrophobic Membranes for Membrane Distillation 
-<br/><font size="4"> **Tobias Jäger, Stephan Leyer, Nikolaos Prasianakis**</font>
+<br/><font size="4"> **Tobias Jäger, Athanasios Mokos, Stephan Leyer,  Nikolaos Prasianakis**</font>
 <br/>
-<br/><font size="4"><span style="color:gray">*Mechanical Engineering-Heat and Mass Transfer and Thermodynamics, University of Luxembourg,
-<br/> Transport Mechanisms Group, Paul Scherer Institute*
+<br/><font size="4"><span style="color:gray">*Mechanical Engineering-Heat and Mass Transfer and Thermodynamics, University of Luxembourg
+<br/> Transport Mechanisms Group, Laboratory for Waste Management, Paul Scherer Institute, Switzerland*
 
 <br/><i class="fa fa-at"></i><stephan.leyer@uni.lu>, <nikolaos.prasianakis@psi.ch>
 <br/>
