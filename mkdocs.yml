@@ -11,6 +11,7 @@ nav:
       - Parameter Calibration for Multi-Physics Simulations: 'parametercalib/index.md'
       - Toward exact interaction energies in large molecules with Quantum Monte Carlo: 'quantumMC/index.md'
       - 3D Multi-phase Lattice Boltzmann Simulations in Hydrophobic Membranes for Membrane Distillation: 'BoltzmannSim/index.md'
+      - GigaSOM.jl --  Huge-scale cytometry clustering and visualization: 'GigaSom/index.md'
 
    ##############
   - Web Portals:
