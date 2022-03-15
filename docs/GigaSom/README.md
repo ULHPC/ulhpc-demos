@@ -46,8 +46,8 @@ The ability to process a gigascale dataset to a comprehensible embedding and pre
 
 <br/>
 <center>
-<figure class="figure">
-    <img  src="images/results.jpg" width=500 alt="centered image"/>
+<figure class="figure" style ="text-align: center">
+    <img  src="images/results.jpg" width=900 alt="embeddings"/>
     <figcaption> <em>Figure 2. Performance of GigaSOM. </em> </figcaption>
 </figure>
 </center>
