@@ -19,6 +19,7 @@ Selected applications and demonstrators established using the [High Performance 
 | __[Parameter Calibration for Multi-Physics Simulations](parametercalib/index.md)__                                             |
 | __[3D Multi-phase Lattice Boltzmann Simulations in Hydrophobic Membranes for Membrane Distillation](BoltzmannSim/index.md)__   |
 | __[GigaSOM.jl -- Huge-scale cytometry clustering and visualization](GigaSom/index.md)__                                          |
+| __[COBREXA.jl -- Large-scale constraint-based metabolic modeling](COBREXA/index.md)__                                          |
 
 
 
