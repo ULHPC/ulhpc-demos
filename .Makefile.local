@@ -8,6 +8,27 @@
 ################################################################################
 
 SETUP_TARGETS += setup-direnv setup-pyenv
+
+RSYNC = rsync
+RSYNC_OPTS = --info=progress2 --partial-dir=.rsync-partial --exclude '.git'  --exclude '.Trash' --exclude 'old' --exclude '.template*' --exclude '*.iso'
+
+DEPLOY_HOST=www.hpc
+DSTDIR=/var/www/hpc-demos.uni.lu
+
+deploy: build sync
+
+.PHONY: build preview serve
+preview serve:
+	mkdocs serve
+
+sync-dry-run: build
+	@echo "=> dry-run synchonizing built site on $(DEPLOY_HOST)"
+	$(RSYNC) --dry-run -avz --delete $(RSYNC_OPTS) ./public/./  $(DEPLOY_HOST):$(DSTDIR)/
+
+sync: build
+	@echo "=> synchonizing built site on $(DEPLOY_HOST)"
+	$(RSYNC) -avz --delete $(RSYNC_OPTS) ./public/./  $(DEPLOY_HOST):$(DSTDIR)/
+
 build:
 	@if [ -n "`which mkdocs`" ]; then \
 		mkdocs build; \
