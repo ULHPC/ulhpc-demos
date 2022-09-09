@@ -12,6 +12,7 @@ nav:
       - Toward exact interaction energies in large molecules with Quantum Monte Carlo: 'quantumMC/index.md'
       - 3D Multi-phase Lattice Boltzmann Simulations in Hydrophobic Membranes for Membrane Distillation: 'BoltzmannSim/index.md'
       - GigaSOM.jl --  Huge-scale cytometry clustering and visualization: 'GigaSom/index.md'
+      - COBREXA.jl -- Large-scale constraint-based metabolic modeling: 'COBREXA/index.md'
 
    ##############
   - Web Portals:
