@@ -22,14 +22,7 @@ Selected applications and demonstrators established using the [High Performance 
 | __[COBREXA.jl -- Large-scale constraint-based metabolic modeling](COBREXA/index.md)__                                          |
 
 
-
-
-
-
-
-
-
-Consider our latest **[ULHPC User Guide (PDF)](https://hpc.uni.lu/download/slides/2020-ULHPC-user-guide.pdf)**
+Consider our latest **[ULHPC User Guide (PDF)](https://hpc-docs.uni.lu/slurm/2022-ULHPC-user-guide.pdf)**
 
 * [What is [UL]HPC](https://hpc-docs.uni.lu/getting-started/#what-is-ulhpc) -- [Supercomputing and Storage Resources at a glance](https://hpc-docs.uni.lu/getting-started/#supercomputing-and-storage-resources-at-a-glance)
 * [Getting Started](https://hpc-docs.uni.lu/getting-started/)
@@ -42,4 +35,4 @@ Consider our latest **[ULHPC User Guide (PDF)](https://hpc.uni.lu/download/slide
 [:fontawesome-solid-sign-in-alt: Tutorials](https://ulhpc-tutorials.readthedocs.io){: .md-button .md-button--link }
 [:fontawesome-solid-rocket: Iris](https://hpc-docs.uni.lu/systems/iris){: .md-button .md-button--link }
 
-[![By ULHPC](https://img.shields.io/badge/by-ULHPC-blue.svg)](https://hpc.uni.lu) [![gitlab](https://img.shields.io/badge/git-gitlab-lightgray.svg)](https://gitlab.uni.lu/www/ulhpc-demos) [![Issues](https://img.shields.io/badge/issues-gitlab-green.svg)](https://gitlab.uni.lu/www/ulhpc-demos/issues)
+[![By ULHPC](https://img.shields.io/badge/by-ULHPC-blue.svg)](https://hpc.uni.lu) [![github](https://img.shields.io/badge/git-github-lightgray.svg)](https://github.com/ULHPC/ulhpc-demos) [![Issues](https://img.shields.io/badge/issues-github-green.svg)](https://github.com/ULHPC/ulhpc-demos/issues)
